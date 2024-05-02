@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anannya: Developer Portfolio</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            background-image: url("Background.jpg");
+            color: white;
+            font-family: 'Roboto';
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height: 80px;  
+            background-color:rgb(28 45 76 / 80%);
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+        }
+        nav ul li{
+            list-style: none;
+            margin:0px 23px; 
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:azure;
+            
+        }
+
+        nav ul li a:hover{
+            text-decoration: none;
+            color:pink;
+            font-size: 1.2rem;
+            
+        }
+
+
+        
+        .first{
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 10px;
+            font-size:1.6rem;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        } 
+        
+        .first >div{
+            width: 40%;
+            
+        }
+
+
+        .leftSection{
+            margin-top: 80px  ;
+             
+        }
+
+        .RightSection img{
+          width: 80%;
+          margin: 50px 50px;    
+            
+        }
+
+        .a{
+            color: rgb(254, 192, 201);
+            font-weight: 600;
+        }
+        #element{
+            color: pink;
+        }
+        .second{
+            display: flex;
+            justify-content: space-around;
+            max-width: 40vw;
+            margin: 12px 10px;
+            padding: 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        
+        .Left{
+            width:400%;
+            margin-right: 34%;
+        }
+        .Left img{
+           
+            width: 200%;
+            margin: 20px 82px;   
+        }
+        .Right {
+            width:fit-content;
+            margin-left: 70% ;
+            margin: 0px ; 
+        }
+        .Right h1{
+            width: 140%;
+            margin-left:240px;
+            margin-top: 10px;
+            font-size:1.4rem;
+             
+
+        }
+
+        .Right p{
+            margin-top: 10px;
+            margin-left:240px; 
+            width: 120%;
+            padding-left:10px;
+            font-size:1.2rem;
+            
+        }
+       
+footer {
+    background-color: rgb(28 45 76 / 80%);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button button:last-child {
+    margin-right: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Anannya's Alcove</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" id="aboutBtn">About</a></li>
+                    <li><a href="Certification.html">Certifications</a></li>
+                    <li><a href="Project.html">Projects</a></li>
+                </ul>
+            </div>
+              
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <div class="leftSection">
+                Hi,<span class="a"> Anannya Srivastava</span> this side
+                <div>I am a Passionate<BR> <span id="element">Web Developer & Data Science Enthusiast </div></span>
+            </div>    
+            <div class="RightSection">
+                <img src="code.png">
+            </div>        
+        </section>
+
+        <section class="second">
+           <div class="Left"> 
+            <img src="SSR Featuring.jpg">
+           </div>
+           <div class="Right">
+             <h1>Work Experience</h1>
+             <p>Worked as a Member Relation Volunteer in IEEE Pune Section for the Year 2023-24 & Currently working as a Co-Section Student Representative in IEEE Pune section</p>          
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button">
+            <a href="CV_SEM4.pdf"><button>Download Resume</button></a>
+            <a href="double.html"><button>Contact Me</button></a><br><br>
+            <p>&copy; 2024 Anannya's Alcove. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="popup" id="aboutPopup">
+       
+        <p class="container">
+            <center>
+            <h1>About Me</h1><br>
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>The Coding Maven</h2><br>
+            </center>
+            <p style="padding:20px; text-align:center;">    
+                In the vast expanse of the digital world, I am a beacon of diligence and proficiency, 
+                mastering the intricate art of programming. My brilliance extends beyond coding; 
+                I excel in leadership and management, guiding my team with grace and poise. 
+                Challenges are mere stepping stones for me, as I face them with unwavering determination. 
+                I am humble and generous, always ready to share my knowledge and expertise with warmth. 
+                I am an epitome of empowerment, leaving an indelible mark—a legacy of determination, 
+                brilliance, and the unwavering pursuit of excellence.me.</p>
+        </p>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['<i>Web Developer</i>', '&amp; Data Science Enthusiast .'],
+          typeSpeed: 50,
+        });
+      </script>
+    <script>
+        function openPopup() {
+            document.getElementById("aboutPopup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("aboutPopup").style.display = "none";
+        }
+
+        document.getElementById("aboutBtn").addEventListener("click", function(event){
+            event.preventDefault();
+            openPopup();
+        });
+    </script>
+</body>
+</html>

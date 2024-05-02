@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anannya: Developer Portfolio</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        
+        body{
+            background-image:url("back.jpg");
+            color: white;
+            font-family: 'Roboto';
+        }
+
+        nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height: 80px;  
+            background-color: rgb(22, 22, 67);
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+        }
+        nav ul li{
+            list-style: none;
+            margin:0px 23px; 
+
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:azure;
+            
+        }
+
+        nav ul li a:hover{
+            text-decoration: none;
+            color:pink;
+            font-size: 1.2rem;
+            
+        }
+
+        main{
+            width:50%;
+            height:400px;
+            margin:auto;
+            margin-top: 80px;
+            box-shadow: 0px 0px 3px grey;
+            position: relative;
+            overflow: hidden;    
+        
+        }
+
+        main img{
+            width:80%;
+            height:200px;
+            margin:auto;
+            margin-top: 100px;
+            box-shadow: 0px 0px 3px grey;
+        }
+
+        .slide{
+            margin: 1px 1px;
+            width:100%;
+            height:100%;
+            position: absolute; /* Makes a stack of all images added under this Class */
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: rgb(22, 22, 67);
+            color: white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        .button button:hover {
+            background-color: rgba(22, 22, 67, 0.8);
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 1);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 9999;
+        }
+        
+        .popup-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: rgb(28 45 76 / 80%);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Anannya's Alcove</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" id="aboutBtn">About</a></li>
+                    <li><a href="Certification.html">Certifications</a></li>
+                    <li><a href="Project.html">Projects</a></li>
+                </ul>
+            </div>
+              
+        </nav>
+    </header>
+    <main>
+        <img src="certificates\Acemegrade_Intership.jpg" class="slide" alt="" width="200px" height="200px">
+        <img src="certificates\Power BI.png" class="slide" alt="" width="200px" height="200px">        
+        <img src="certificates\Prayag.png" class="slide" alt="" width="200%" height="200%">
+        <img src="certificates\Udemy_Research.jpg" class="slide" alt=""width="200px" height="200px"> 
+        <img src="certificates\certificavte_Resume.jpg" class="slide" alt=""width="200px" height="200px"> 
+    </main>
+    <div class="button">
+        <button onclick="goPrev()">Prev</button>
+        <button onclick="goNext()">Next</button>
+    </div>  
+    <footer>
+        <div class="button">
+            <a href="CV_SEM4.pdf"><button>Download Resume</button></a>
+            <a href="double.html"><button>Contact Me</button></a>
+            <br><br>
+            <p>&copy; 2024 Anannya's Alcove. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="popup" id="aboutPopup">
+       
+        <p class="container">
+            <center>
+            <h1>About Me</h1><br>
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>The Coding Maven</h2><br>
+            </center>
+            <p style="padding:20px; text-align:center;">    
+                In the vast expanse of the digital world, I am a beacon of diligence and proficiency, 
+                mastering the intricate art of programming. My brilliance extends beyond coding; 
+                I excel in leadership and management, guiding my team with grace and poise. 
+                Challenges are mere stepping stones for me, as I face them with unwavering determination. 
+                I am humble and generous, always ready to share my knowledge and expertise with warmth. 
+                I am an epitome of empowerment, leaving an indelible mark—a legacy of determination, 
+                brilliance, and the unwavering pursuit of excellence.me.</p>
+        </p>
+    </div>
+    
+    <script>
+        function openPopup() {
+            document.getElementById("aboutPopup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("aboutPopup").style.display = "none";
+        }
+
+        document.getElementById("aboutBtn").addEventListener("click", function(event){
+            event.preventDefault();
+            openPopup();
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

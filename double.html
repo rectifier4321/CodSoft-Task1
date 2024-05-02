@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divide Page Vertically</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            margin: 18px 80px;
+            height: 40px;
+            padding-top: 12px;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 12px;
+            height: 80vh; /* 100% viewport height */
+        }
+
+        .left-half, .right-half {
+            width: 48%;
+            height: 100%;
+        }
+
+        .left-half {
+            background-image: url("contact.jpg"); /* Background image */
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the image */
+        }
+
+        .right-half {
+            background-color: #d9a6cb; /* Dark Gray */
+           
+            
+        }
+        .right-half h2  {
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        .right-half p  {
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(28 45 76 / 80%);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0px 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: azure;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: pink;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background-color: rgb(28 45 76 / 80%);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .button {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .button button {
+            background-color: #fff;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button button:last-child {
+            margin-right: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+      .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+  
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="index.html">Anannya's Alcove</a></div>
+            
+        </nav>
+    </header>
+    <div class="container">
+        <div class="left-half">
+            
+        </div>
+        <div class="right-half">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+        <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+        <p><strong>Email:</strong> info@example.com</p>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="button">
+            <a href="CV_SEM4.pdf"><button>Download Resume</button></a>
+            <a href="double.html"><button>Contact Me</button></a><br><br>
+            <p>&copy; 2024 Anannya's Alcove. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="popup" id="aboutPopup">
+        <p class="contain">
+            <center>
+                <h1>About Me</h1><br>
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>The Coding Maven</h2><br>
+            </center>
+            <p style="padding:20px; text-align:center;">    
+                In the vast expanse of the digital world, I am a beacon of diligence and proficiency, 
+                mastering the intricate art of programming. My brilliance extends beyond coding; 
+                I excel in leadership and management, guiding my team with grace and poise. 
+                Challenges are mere stepping stones for me, as I face them with unwavering determination. 
+                I am humble and generous, always ready to share my knowledge and expertise with warmth. 
+                I am an epitome of empowerment, leaving an indelible mark—a legacy of determination, 
+                brilliance, and the unwavering pursuit of excellence.
+            </p>
+        </p>
+    </div>
+    
+    <script>
+        function openPopup() {
+            document.getElementById("aboutPopup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("aboutPopup").style.display = "none";
+        }
+
+        document.getElementById("aboutBtn").addEventListener("click", function(event){
+            event.preventDefault();
+            openPopup();
+        });
+    </script>
+</body>
+</html>
